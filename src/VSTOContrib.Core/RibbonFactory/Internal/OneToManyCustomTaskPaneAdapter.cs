@@ -190,6 +190,10 @@ namespace VSTOContrib.Core.RibbonFactory.Internal
                 {
                     customTaskPanes.Remove(customTaskPane);
                 }
+                catch (InvalidComObjectException)
+                {
+                    customTaskPanes.Remove(customTaskPane);
+                }
 
                 CleanupView(view);
                 break;
